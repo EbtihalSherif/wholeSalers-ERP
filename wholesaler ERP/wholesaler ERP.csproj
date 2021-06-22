@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D9C291AF-8FF4-4E24-BCA6-ABBFAA36E37A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>wholesaler_ERP</RootNamespace>
+    <AssemblyName>wholesaler ERP</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>E:\final final isa\final final isa\IMDB2\IMDB\IMDB\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.WordClientPkgLib">
+      <HintPath>E:\New folder\wholesaler ERP\obj\Debug\Interop.WordClientPkgLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=8.0.21.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Web, Version=8.0.21.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Drawing.Common.4.7.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="add_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_Customer.Designer.cs">
+      <DependentUpon>add_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_employee.Designer.cs">
+      <DependentUpon>add_employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_job.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_job.Designer.cs">
+      <DependentUpon>add_job.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_products.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="add_products.Designer.cs">
+      <DependentUpon>add_products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_controller.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="admin_controller.Designer.cs">
+      <DependentUpon>admin_controller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bill_details.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="bill_details.Designer.cs">
+      <DependentUpon>bill_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBconnect.cs" />
+    <Compile Include="Excel_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Excel_info.Designer.cs">
+      <DependentUpon>Excel_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_bill_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_bill_details.Designer.cs">
+      <DependentUpon>form_bill_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InoviceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InoviceForm.Designer.cs">
+      <DependentUpon>InoviceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login_form.Designer.cs">
+      <DependentUpon>login_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inventory_usercontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="inventory_usercontrol.Designer.cs">
+      <DependentUpon>inventory_usercontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainForm.Designer.cs">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mn hesab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mn hesab.Designer.cs">
+      <DependentUpon>mn hesab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="products_group.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="products_group.Designer.cs">
+      <DependentUpon>products_group.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="purchased_bill_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="purchased_bill_details.Designer.cs">
+      <DependentUpon>purchased_bill_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="purchases_usercontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="purchases_usercontrol.Designer.cs">
+      <DependentUpon>purchases_usercontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="purchase_bill_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="purchase_bill_details.Designer.cs">
+      <DependentUpon>purchase_bill_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_usercontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="reports_usercontrol.Designer.cs">
+      <DependentUpon>reports_usercontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="salesusercontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="salesusercontrol.Designer.cs">
+      <DependentUpon>salesusercontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="system_admins.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="system_admins.Designer.cs">
+      <DependentUpon>system_admins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="treasuy_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="treasuy_form.Designer.cs">
+      <DependentUpon>treasuy_form.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="add_Customer.resx">
+      <DependentUpon>add_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_employee.resx">
+      <DependentUpon>add_employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_job.resx">
+      <DependentUpon>add_job.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_products.resx">
+      <DependentUpon>add_products.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_controller.resx">
+      <DependentUpon>admin_controller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bill_details.resx">
+      <DependentUpon>bill_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Excel_info.resx">
+      <DependentUpon>Excel_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_bill_details.resx">
+      <DependentUpon>form_bill_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InoviceForm.resx">
+      <DependentUpon>InoviceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login_form.resx">
+      <DependentUpon>login_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventory_usercontrol.resx">
+      <DependentUpon>inventory_usercontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainForm.resx">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mn hesab.resx">
+      <DependentUpon>mn hesab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="products_group.resx">
+      <DependentUpon>products_group.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="purchased_bill_details.resx">
+      <DependentUpon>purchased_bill_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="purchases_usercontrol.resx">
+      <DependentUpon>purchases_usercontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="purchase_bill_details.resx">
+      <DependentUpon>purchase_bill_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_usercontrol.resx">
+      <DependentUpon>reports_usercontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="salesusercontrol.resx">
+      <DependentUpon>salesusercontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="system_admins.resx">
+      <DependentUpon>system_admins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="treasuy_form.resx">
+      <DependentUpon>treasuy_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\salesusercontrol.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-computer-icons-user-login-icon-design-media-area-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-computer-icons-user-login-icon-design-media-area-user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-computer-icons-login-scalable-vector-graphics-emai-5be737694adcc1.6333251315418796573066.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-computer-icons-login-scalable-vector-graphics-emai-5be737694adcc1.63332513154187965730661.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\candidate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employees.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skills.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\candidate1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employees1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business-report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-bag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business-report %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delivery-time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\locker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skills %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skills %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employees %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-cart %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-list %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-bag %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business-report %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\storage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delivery-time %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grouped-users-interface-symbol-for-group-verification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\locker %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-321.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

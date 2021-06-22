@@ -1,0 +1,30 @@
+[33mcommit b25ab98e60b773fc1d9656350035159e04dbbc61[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Merge: b7cd9aa e069d0d
+Author: EbtihalSherif <ebtihalsherif@gmail.com>
+Date:   Tue Oct 20 00:12:39 2020 +0200
+
+    changes
+
+[33mcommit e069d0d77f3a6598d404b6bd7b549601d1d72fe0[m[33m ([m[1;31morigin/version2[m[33m)[m
+Author: Tokaelsayed <tokasayed045@gmail.com>
+Date:   Mon Oct 19 23:05:13 2020 +0200
+
+    customers form added
+
+[33mcommit b7cd9aa6661ebe54b0ac6ab9dca6ca71a2ce096e[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: EbtihalSherif <ebtihalsherif@gmail.com>
+Date:   Sun Oct 18 14:01:34 2020 +0200
+
+    added static object
+
+[33mcommit 22c58b4bab1053b20735796d73aabe932c9c922f[m
+Author: EbtihalSherif <ebtihalsherif@gmail.com>
+Date:   Sun Oct 18 13:27:09 2020 +0200
+
+    database update
+
+[33mcommit e77930917d605d7f78dc9aefdf8281809687e932[m
+Author: EbtihalSherif <ebtihalsherif@gmail.com>
+Date:   Sun Oct 18 11:45:22 2020 +0200
+
+    database
